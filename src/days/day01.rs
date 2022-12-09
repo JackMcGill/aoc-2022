@@ -3,7 +3,8 @@ use std::str::Lines;
 
 pub fn main() {
     println!("Day 1");
-    let data: String = fs::read_to_string("src/inputs/day01/input.txt").expect("Couldn't read in file");
+    let data: String =
+        fs::read_to_string("src/inputs/day01/input.txt").expect("Couldn't read in file");
     let lines: Lines = data.lines();
 
     let mut cals: i32 = 0;

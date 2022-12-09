@@ -4,7 +4,10 @@ use std::fs;
 pub fn main() {
     println!("Day 06");
 
-    let data: Vec<char> = fs::read_to_string("src/inputs/day06/input.txt").expect("Could not read in file").chars().collect();
+    let data: Vec<char> = fs::read_to_string("src/inputs/day06/input.txt")
+        .expect("Could not read in file")
+        .chars()
+        .collect();
 
     println!("Part one: {}", detect_start_of_packet(data.clone(), 4));
     println!("Part two: {}", detect_start_of_packet(data, 14));

@@ -3,7 +3,8 @@ use std::str::Lines;
 
 pub fn main() {
     println!("Day 2");
-    let data: String = fs::read_to_string("src/inputs/day02/input.txt").expect("Could not read in file");
+    let data: String =
+        fs::read_to_string("src/inputs/day02/input.txt").expect("Could not read in file");
     let lines: Lines = data.lines();
 
     part_one(lines.clone());
@@ -24,7 +25,7 @@ fn part_one(lines: Lines) {
             "A Z" => 3,
             "B Z" => 3 + 6,
             "C Z" => 3 + 3,
-            _ => 0
+            _ => 0,
         };
     }
     println!("Part one: {}", score);
@@ -43,7 +44,7 @@ fn part_two(lines: Lines) {
             "A Z" => 6 + 2,
             "B Z" => 6 + 3,
             "C Z" => 6 + 1,
-            _ => 0
+            _ => 0,
         };
     }
     println!("Part two: {}", score);

@@ -6,7 +6,8 @@ const PRIORITY: &str = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 pub fn main() {
     println!("Day three");
 
-    let data: String = fs::read_to_string("src/inputs/day03/input.txt").expect("Could not read in file");
+    let data: String =
+        fs::read_to_string("src/inputs/day03/input.txt").expect("Could not read in file");
     let lines: Lines = data.lines();
 
     println!("Part 1: {}", part_one(lines.clone()));
@@ -19,7 +20,10 @@ fn part_one(lines: Lines) -> usize {
     for line in lines {
         let first: &str = &line[..line.len() / 2];
         let second: &str = &line[line.len() / 2..];
-        count += PRIORITY.find(get_common_between_two(first, second).unwrap()).unwrap() + 1;
+        count += PRIORITY
+            .find(get_common_between_two(first, second).unwrap())
+            .unwrap()
+            + 1;
     }
     count
 }

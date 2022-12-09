@@ -5,7 +5,8 @@ use std::str::{Lines, Split};
 pub fn main() {
     println!("Day 4");
 
-    let data: String = fs::read_to_string("src/inputs/day04/input.txt").expect("Could not read in file");
+    let data: String =
+        fs::read_to_string("src/inputs/day04/input.txt").expect("Could not read in file");
     let lines: Lines = data.lines();
 
     part_one(lines.clone());
